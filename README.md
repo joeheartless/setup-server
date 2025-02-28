@@ -1,6 +1,6 @@
 # Server Setup V.1.0.0
 ## Overview
-This script automates the configuration of a Linux server, including network settings, package installations, and security hardening. It logs all operations and provides interactive options for customization.
+This script automates the configuration of a Linux server (Ubuntu Server 24.04.2 LTS), including network settings, package installations, and security hardening. It logs all operations and provides interactive options for customization.
 
 ## Features
 - **Network Configuration:** Supports both DHCP and static IP settings.
@@ -32,5 +32,7 @@ chmod +x server-setup.sh
 ```bash
 ./server-setup.sh
 ```
+## Disclaimer
+This script has been tested and runs optimally on **Ubuntu Server 24.04.2 LTS**. Compatibility with other versions may vary.
 
 
