@@ -4,13 +4,13 @@
 # Written by Prima Agus Setiawan 
 # a.k.a joeheartless 
 
-set -e 
-exec > >(tee -i /var/log/server-setup.log)
-exec 2>&1
-
 echo "[+] Checking sudo access..."
 sudo -v || { echo "[!] Sudo authentication failed! Exiting."; exit 1; }
 while true; do sudo -v; sleep 300; done &
+
+set -e 
+exec > >(sudo tee -i /var/log/server-setup.log)
+exec 2>&1
 
 spinner_kontol() {
     local pid=$1
