@@ -266,7 +266,7 @@ if [[ "$EXTRA_HARDENING" =~ ^(yes|ye|y|gas|yuhu|youman|ys|yd|si|ya|yak|yoi)$ ]];
         echo "[+] IPv6 has been disabled!"
     fi
 
-        read -p "Enable ASLR? (yes/no): " ENABLE_ASLR
+        read -p "Enable ASLR? (default "No"): " ENABLE_ASLR
     if [[ "$ENABLE_ASLR" =~ ^(yes|ye|y|gas|yuhu|youman|ys|yd|si|ya|yak|yoi)$ ]]; then
         echo "[+] Enabling Exec Shield & ASLR..."
         sudo sed -i '/^kernel.exec-shield/d' /etc/sysctl.conf
